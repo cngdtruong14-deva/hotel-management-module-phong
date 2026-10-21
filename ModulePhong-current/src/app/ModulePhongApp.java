@@ -1,4 +1,4 @@
-package demo;
+package app;
 import common.*;
 import module_phong.dao.SqlServerPhongDAO;
 import module_phong.service.PhongService;

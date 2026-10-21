@@ -1,4 +1,4 @@
-package demo;
+package app;
 
 import common.DBConnection;
 import common.SchemaContract;

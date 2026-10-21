@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="HotelModules" default="jar" basedir=".">
+<project name="HotelManagement" default="jar" basedir=".">
     <property name="classes" location="build/classes"/>
     <property name="db.config" location="config/db.properties"/>
     <path id="runtime"><pathelement location="${classes}"/><fileset dir="lib" includes="*.jar"/></path>
@@ -9,20 +9,20 @@
     </target>
     <target name="jar" depends="compile">
         <jar destfile="ModulePhong.jar" basedir="${classes}">
-            <manifest><attribute name="Main-Class" value="demo.HotelSharedApp"/></manifest>
+            <manifest><attribute name="Main-Class" value="app.HotelSharedApp"/></manifest>
         </jar>
     </target>
     <target name="run" depends="compile" description="Run all module panels with shared SQL Server">
-        <java classname="demo.HotelSharedApp" fork="true" failonerror="true" dir="${basedir}" classpathref="runtime">
+        <java classname="app.HotelSharedApp" fork="true" failonerror="true" dir="${basedir}" classpathref="runtime">
             <jvmarg value="-Djava.library.path=${basedir}/lib"/>
             <arg value="--sql"/><arg file="${db.config}"/>
         </java>
     </target>
     <target name="run-demo" depends="compile" description="Run shared memory demo">
-        <java classname="demo.HotelSharedApp" fork="true" failonerror="true" dir="${basedir}" classpathref="runtime"/>
+        <java classname="app.HotelSharedApp" fork="true" failonerror="true" dir="${basedir}" classpathref="runtime"/>
     </target>
     <target name="check-db" depends="compile" description="Read-only JDBC/schema check">
-        <java classname="demo.CheckDatabase" fork="true" failonerror="true" dir="${basedir}" classpathref="runtime">
+        <java classname="app.CheckDatabase" fork="true" failonerror="true" dir="${basedir}" classpathref="runtime">
             <jvmarg value="-Djava.library.path=${basedir}/lib"/>
             <arg file="${db.config}"/>
         </java>

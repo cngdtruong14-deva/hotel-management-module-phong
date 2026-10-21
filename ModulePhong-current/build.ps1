@@ -9,6 +9,6 @@ try {
     $taskSources = Get-ChildItem src -Filter *.java -Recurse | ForEach-Object FullName
     javac -encoding UTF-8 --release 17 -d build/classes $taskSources
     if ($LASTEXITCODE -ne 0) { throw 'Compilation failed' }
-    jar --create --file ModulePhong.jar --main-class demo.HotelSharedApp -C build/classes .
+    jar --create --file ModulePhong.jar --main-class app.HotelSharedApp -C build/classes .
     if ($LASTEXITCODE -ne 0) { throw 'JAR creation failed' }
 } finally { Pop-Location }
