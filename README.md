@@ -1,29 +1,25 @@
-# Hotel Management — Module Phòng
+# Hotel Management — Java Swing
 
-Source Java nâng cao của nhóm: **2026.10.21.1**, schema SQL Server **room-simple-1**. Source chính duy nhất ở [ModulePhong-current](ModulePhong-current/).
+Source ở [ModulePhong-current](ModulePhong-current/). Yêu cầu JDK 17+, NetBeans và SQL Server nếu dùng chế độ lưu dữ liệu.
 
-## Bắt đầu
+## Chạy dự án
 
-1. Cài JDK 17+ và NetBeans. Clone repository hoặc tải Code → Download ZIP.
-2. Open Project tại `ModulePhong-current/`.
-3. Xem thử giao diện bằng `run-shared-demo.cmd` (dữ liệu memory; không lưu khi đóng).
-4. Để dùng SQL Server: chạy file `00` → `03` trong [sql](ModulePhong-current/sql/README.md) trên database mới. Database room-simple-1 đã tạo trước bản chống trùng giấy tờ: chạy riêng `06_chan_trung_giay_to.sql` sau khi kiểm tra `USE`.
-5. Sao chép `config/db.example.properties` thành `config/db.properties`, tự cấu hình server/database/tài khoản local. File cấu hình cá nhân được Git bỏ qua.
-6. Run/F6 mở ứng dụng dùng SQL. Xem [hướng dẫn NetBeans và JDBC](ModulePhong-current/NETBEANS_SQL_CHUNG.md).
+1. Clone repository hoặc chọn Code → Download ZIP.
+2. Trong NetBeans, Open Project tại `ModulePhong-current/`.
+3. Chạy `run-shared-demo.cmd` để xem giao diện với dữ liệu memory.
+4. Để chạy SQL Server, làm theo [hướng dẫn SQL](ModulePhong-current/sql/README.md), sao chép `config/db.example.properties` thành `config/db.properties` và điền thông tin kết nối trên máy.
+5. Run/F6 hoặc `run-shared-sqlserver.cmd` để dùng database.
 
-PowerShell trong `ModulePhong-current`: `./build.ps1` để build; `./test.ps1` để kiểm thử. SQL Server JDBC driver và giấy phép đi kèm trong `lib/`.
+Build bằng `./build.ps1`, kiểm thử bằng `./test.ps1` trong thư mục `ModulePhong-current`.
 
-## Ghép module
+## Cấu trúc
 
-- [Hợp đồng API, model, panel và database](ModulePhong-current/CONTRACT.md)
-- [Bàn giao Đặt phòng & Lưu trú](ModulePhong-current/BAN_GIAO_DAT_PHONG_LUU_TRU.md)
-- [Phân chia trách nhiệm](docs/project/PHAN_CHIA_MODULE.md)
-- [Nhật ký chỉnh sửa](docs/project/NHAT_KY_CHINH_SUA.md)
-- [7 file SQL trên Google Docs](https://docs.google.com/document/d/1wivWsyp-QgpSCAFqNUgu7FbD8k6Ykh18gkqobbYiJE4)
-- [ZIP source hiện hành](deliverables/ModulePhong-current.zip) · [SQL độc lập](handoff/HotelManagement-SQL-local.zip)
+- `src/module_phong`: quản lý phòng, tiện nghi, yêu cầu và xem phản hồi lưu trú.
+- `src/module_khachhang`: hồ sơ khách hàng.
+- `src/module_datphong`: khung đặt phòng và lưu trú để tích hợp.
+- `src/module_dichvu`, `src/module_lienket`: dịch vụ và liên kết dữ liệu.
+- `src/common`: cấu hình JDBC và context dùng chung.
+- `sql`: schema SQL Server và dữ liệu mẫu.
+- `test`: kiểm thử; `lib`: JDBC driver và giấy phép.
 
-Quản lý phòng phụ trách danh mục, tiện nghi, gửi yêu cầu và xem review/trạng thái/phản ánh. Đặt phòng & Lưu trú phụ trách xác nhận/nhận/trả/hủy/đổi và gửi kết quả qua CongLuuTru. Consumer đầy đủ của thành viên chưa tích hợp. Module khách hàng sở hữu hồ sơ 13 trường; source khách hàng giữ nguyên trong lần xuất bản này.
-
-Thành viên lấy `main` làm bản tham chiếu, mở nhánh riêng khi đóng góp và ghép thay đổi qua pull request. Các mã phòng/khách/phiếu dùng String theo CONTRACT, dùng chung cấu hình JDBC. Không commit mật khẩu hay db.properties.
-
-Bản ZIP cũ và dữ liệu chẩn đoán giữ local, không đưa vào repository. Phiên bản và hash hiện hành nằm trong ModulePhong-current/VERSION.json và FILE_HASHES.json.
+Các module dùng chung database và DBConnection. Giao diện ghép bằng JTabbedPane; CongLuuTru là cổng nhận kết quả lưu trú. Giao diện đặt phòng đầy đủ của thành viên cần tích hợp thêm. Không commit cấu hình cá nhân `db.properties`.

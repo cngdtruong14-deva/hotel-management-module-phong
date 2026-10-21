@@ -13,3 +13,18 @@
 .env
 .env.*
 !.env.example
+
+# Local project records and packaged internal material
+/AGENTS.md
+/CURRENT_MODULE.md
+/docs/
+/deliverables/
+/handoff/
+/ModulePhong-current/docs/
+/ModulePhong-current/verification/
+/ModulePhong-current/*.md
+!/ModulePhong-current/README.md
+/ModulePhong-current/FILE_HASHES.json
+/ModulePhong-current/VERSION.json
+/ModulePhong-current/release.ps1
+/ModulePhong-current/ModulePhong.jar
