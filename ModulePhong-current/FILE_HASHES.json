@@ -1,0 +1,470 @@
+[
+  {
+    "path": ".gitignore",
+    "sha256": "07B5EDDB770525EABFB1F2242E1425BBC07AFCBCEBB5F3A41D1C4B3B4B0C6835"
+  },
+  {
+    "path": "BAN_GIAO_DAT_PHONG_LUU_TRU.md",
+    "sha256": "5DCC9C17A26333FBB8BEF34BEDA508B47C8443533BEB37FAD6AB5C1DE0209160"
+  },
+  {
+    "path": "build.ps1",
+    "sha256": "B4A758127EF434B5DEC281D4A7B3FBD7B3A5458EC7E7F826B8F5C2DA4962A302"
+  },
+  {
+    "path": "build.xml",
+    "sha256": "FDB481B65770A5C00699594BC56404E38AD73E4CB3ADA8CDA3AEFE49F95B8D61"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "sha256": "D26BCF4CDD2943E59DD596503B38FCE4209BB3936E752F4301C50DEA115E7987"
+  },
+  {
+    "path": "config/db.example.properties",
+    "sha256": "F33380BAB7B08632D34735B32D6A1922DD3068D051FAD463C97A868A7ABD9BED"
+  },
+  {
+    "path": "CONTRACT.md",
+    "sha256": "CE25FF0FA6B0DD511B974FD13D079AE0AF5930413D137EACCC6C68C01B347015"
+  },
+  {
+    "path": "docs/project/KE_HOACH_TACH_MODULE.md",
+    "sha256": "E32B8B5275B3331BF73BB5F0200634C01B7843D0EBB6A15F105096B21A03A571"
+  },
+  {
+    "path": "docs/project/NHAT_KY_CHINH_SUA.md",
+    "sha256": "95E00F35C49F6F76B8985E9EA30FC2DAAA57D0B9A64475863B069AB5F1DA593C"
+  },
+  {
+    "path": "docs/project/PHAN_CHIA_MODULE.md",
+    "sha256": "67980377B22B7A7BCC2616E74E13DA29442E2DD04788F4BCE61934E6AB18B771"
+  },
+  {
+    "path": "lib/MICROSOFT-AUTH-LICENSE.txt",
+    "sha256": "9B74C81D11A98C8E3870281001450CD574DC92EAC2A4098B7B8A9F66B3EF29F7"
+  },
+  {
+    "path": "lib/MICROSOFT-JDBC-LICENSE.txt",
+    "sha256": "96783D7ED4FF39E20C9AE6642AC6DE02692EC8909E9910700E3694D68211EE97"
+  },
+  {
+    "path": "lib/mssql-jdbc_auth-13.2.1.x64.dll",
+    "sha256": "CFF95E137532224B00C15E877CE6968C58B1D7AED6911E24CE0AA91AB3AF029A"
+  },
+  {
+    "path": "lib/mssql-jdbc-13.2.1.jre11.jar",
+    "sha256": "2D137AA308C78932878952FE3624EA090ECFE644414B8B23E71A305F425698C5"
+  },
+  {
+    "path": "ModulePhong.jar",
+    "sha256": "F54429847DC7BF6173BD558D11BE63692CB218BDB4EAC4B4D014DEA74CEE5A04"
+  },
+  {
+    "path": "nbproject/project.xml",
+    "sha256": "BAF1F0DE369691FCBFDA9D9F3C2AA659487B939165676342AB2AEB943BDA39D5"
+  },
+  {
+    "path": "NETBEANS_SQL_CHUNG.md",
+    "sha256": "6220F925F7028CE950AEF2EF2A24CDAA1C45A18DA5D1E2F0CEA20C6AD377CD1D"
+  },
+  {
+    "path": "README.md",
+    "sha256": "A3FD46BEF89EA49C1292E22F95718121CEFE7D9863F8E6D460885F71F5952A26"
+  },
+  {
+    "path": "release.ps1",
+    "sha256": "E1C8D6B5CF450030C18559C6040000AE55B563BFFF7E362213C6F25D3B072DF2"
+  },
+  {
+    "path": "REQUIREMENTS_AUDIT.md",
+    "sha256": "1D885A92FCA34D8FFE3AD380A776C015DB8F8AA4319956523495AB19C9A82A52"
+  },
+  {
+    "path": "run-demo.cmd",
+    "sha256": "C690D6DE37C206AA24EC3E5E24C6D3DC45765BC5B7F768B07C2CF89DC5B137EF"
+  },
+  {
+    "path": "run-shared-demo.cmd",
+    "sha256": "0B0991E944719E4524B559ABA35CF7AD5A9FE1DBFD25E78EF1206CC17161D823"
+  },
+  {
+    "path": "run-shared-sqlserver.cmd",
+    "sha256": "779C875BDDFE6F7035BA192565A8E8DCAE65B6BEE1F5A1FBA295CACC925E4092"
+  },
+  {
+    "path": "run-sqlserver.cmd",
+    "sha256": "BE3833C982B4DD03818D661198F0FE70CD0DEB5079AA820F62FF12B0AA755A3C"
+  },
+  {
+    "path": "SCHEMA_VONG_DOI_LUU_TRU.md",
+    "sha256": "5DCC9C17A26333FBB8BEF34BEDA508B47C8443533BEB37FAD6AB5C1DE0209160"
+  },
+  {
+    "path": "sql/00_tao_database.sql",
+    "sha256": "C1B840A8A989291AFBD9C106F4C891FA34E80B8C1EB697C0A0301AC03CA0A18D"
+  },
+  {
+    "path": "sql/01_bang_chinh.sql",
+    "sha256": "261CA4E0957CBA32E63A65E96204D495105881E817E3C05D996A6A28C2DADF61"
+  },
+  {
+    "path": "sql/02_bang_chuc_nang.sql",
+    "sha256": "879751B8DA17BBBDB1B57C9BBC0972D333929CC40B3676C6B7BDEFE77605BF1C"
+  },
+  {
+    "path": "sql/03_du_lieu_mau.sql",
+    "sha256": "1C7E4DECD701BD5F299D9B9D551610196664ACCD000C9AED577BCB15ED7CD0A6"
+  },
+  {
+    "path": "sql/04_kiem_tra.sql",
+    "sha256": "2CE04E0D35F66FA7AE1B6C074B40E69637B4262561F9C40E2CB0A41C8F1D4B01"
+  },
+  {
+    "path": "sql/05_vi_du_dat_va_doi_phong.sql",
+    "sha256": "E9625A7617508FC60FA7B3F0C53FBF66D8E499A4561105B8A0549FE4B9F4DC2F"
+  },
+  {
+    "path": "sql/06_chan_trung_giay_to.sql",
+    "sha256": "8959AD05B7E5459994BAD221B311485E57EBFB0C218A8565EF197592AC685C0E"
+  },
+  {
+    "path": "sql/ERD.md",
+    "sha256": "1DFB8CCCE77227F8A2BAA69DF6A4A837D02394D874358D4E49454A3A3C92D0DB"
+  },
+  {
+    "path": "sql/README.md",
+    "sha256": "ADA587BFF511B866B76FA53FFED3149A630A7AF06718B5BBD756E9062DA763C8"
+  },
+  {
+    "path": "src/common/ConnectionFactory.java",
+    "sha256": "05CBE69A95492723274FBF33D9E1A1FA9D29B06241258ABED12C6CDDE26A7405"
+  },
+  {
+    "path": "src/common/DBConnection.java",
+    "sha256": "34A54C89E81388BCABAA81A76719DA2D0300EE884951848EF1AA841A24FCC9AC"
+  },
+  {
+    "path": "src/common/HotelContext.java",
+    "sha256": "57A8EECC2EFC36F78F5617261759E3A866A739D3E50D051338B71CC64979A7D8"
+  },
+  {
+    "path": "src/common/HotelTheme.java",
+    "sha256": "EAEA94A0C0CDD3A6072E91133258837BD6C60229B7188634319D9C23725C56BA"
+  },
+  {
+    "path": "src/common/SchemaContract.java",
+    "sha256": "922AE47F2D86E0302CE43C5ADA6E0DFA71CF341CC522194D265C0B56916EA902"
+  },
+  {
+    "path": "src/demo/CheckDatabase.java",
+    "sha256": "FE631C0C994569BA6A802A297D7CCB9D59515CC2BA71A65BDA5DC355F6A9FD97"
+  },
+  {
+    "path": "src/demo/HotelSharedApp.java",
+    "sha256": "5C37D14CE87890FC3CE8549AAE01D2D9B75060DCEF1456FBAE547678CE2BA28F"
+  },
+  {
+    "path": "src/demo/ModulePhongApp.java",
+    "sha256": "E67683E008D366CF38C08272A993976EC043112CFA4CC92E083D325E329A311A"
+  },
+  {
+    "path": "src/module_datphong/controller/DatPhongController.java",
+    "sha256": "F8837A27F97E78D5B87C7F3FBC019575C4DC98AA13C1CEC408D81AC08922C65E"
+  },
+  {
+    "path": "src/module_datphong/model/DatPhong.java",
+    "sha256": "0F6B914D06862227B50A1E85422267B1BF281DE766D3B723E9B856FB94D5C830"
+  },
+  {
+    "path": "src/module_datphong/model/TrangThaiDatPhong.java",
+    "sha256": "5103CCA16303890C015D480400280CAA62438B5A49DEC0BB04779B17E8E1C68A"
+  },
+  {
+    "path": "src/module_datphong/service/DatPhongService.java",
+    "sha256": "171A291C4C17DA1BF5471E1FE899C4818F7341A520BFCF234819B3C3FD4BB6C1"
+  },
+  {
+    "path": "src/module_datphong/view/DatPhongPanel.java",
+    "sha256": "C7B8C27A41B5C3189EB1AF8D93A59FB64143839A1CE4EB76391BBEEA4351C747"
+  },
+  {
+    "path": "src/module_dichvu/model/DichVu.java",
+    "sha256": "D3D51E9B4529AAC3E39FAC3BD54FA7CB5BC990089B61DD015A0BB5502C5F272A"
+  },
+  {
+    "path": "src/module_dichvu/model/SuDungDichVu.java",
+    "sha256": "CD86AD63B156E75AF230A6065C9AE40BA843236164E2875256A8A1445D96BADE"
+  },
+  {
+    "path": "src/module_dichvu/service/DichVuService.java",
+    "sha256": "8FE9C85AF848C177C422B72694FE223E3785565D878922FD4C548D04CD5B17C6"
+  },
+  {
+    "path": "src/module_khachhang/controller/KhachHangController.java",
+    "sha256": "A3D13D1074AAEC10A7A068089744E7751BCB64CB801E9D0B92A943E3CFCB626D"
+  },
+  {
+    "path": "src/module_khachhang/dao/KhachHangDAO.java",
+    "sha256": "DEA61F05379E39ECE1D5246DB239F5529378B89A6B8F8A4D037DDE4F96681A13"
+  },
+  {
+    "path": "src/module_khachhang/dao/MemoryKhachHangDAO.java",
+    "sha256": "A7AF09D89862977B79D410C349DEE129822F4D5C4B059234CA5C04B0C4CC565D"
+  },
+  {
+    "path": "src/module_khachhang/dao/SqlServerKhachHangDAO.java",
+    "sha256": "4490E51910B3ECD042324C48875F0BDFFC832156B543D8A16CE7BF84FB6D5C6F"
+  },
+  {
+    "path": "src/module_khachhang/model/BoLocKhachHang.java",
+    "sha256": "E2DF6B387CDC03513EB095BA760F5E31CDB40CBFA15F1D846E56CC1FA268D3B3"
+  },
+  {
+    "path": "src/module_khachhang/model/DuLieuKhachHang.java",
+    "sha256": "67F28072F8FED8C630E41D3C1D5B7327F5B831BA5795938A201DEA2E3D38902F"
+  },
+  {
+    "path": "src/module_khachhang/model/GioiTinh.java",
+    "sha256": "5E394AAC06E535EB645F0ACA975A74F4C9F13B6FDECF75FECB74A1BC21815A5F"
+  },
+  {
+    "path": "src/module_khachhang/model/KhachHang.java",
+    "sha256": "E7D5F08DD3F57EB507E3EDE426CF8104716CEE17F906FE7A42AFE0D9CEA3101C"
+  },
+  {
+    "path": "src/module_khachhang/model/LoaiGiayTo.java",
+    "sha256": "3F5DB8F4FF6578FBD23FDF4F784D3878B8DB435BE17596C91F55EA086E6A42B5"
+  },
+  {
+    "path": "src/module_khachhang/model/TrangThaiKhachHang.java",
+    "sha256": "AA488C8BC8ABFB246516591F493C58968DDAAEAAC2A9B9176ADE827DD47D1E59"
+  },
+  {
+    "path": "src/module_khachhang/service/KhachHangService.java",
+    "sha256": "701FDCA0AE92807D4F788F3442D15D5A77F036F6FBEC96AF420CD7EBDA31A291"
+  },
+  {
+    "path": "src/module_khachhang/view/ChiTietKhachHangDialog.java",
+    "sha256": "D2B0231DCC2FC5EFD6DB7409EEE460065988DE4E9B84B3502C339B5AA644D389"
+  },
+  {
+    "path": "src/module_khachhang/view/KhachHangFormDialog.java",
+    "sha256": "B4DE4B54524C9DFD5641782ED50CEDA77927F69D47D801C8F805D9EA616703E3"
+  },
+  {
+    "path": "src/module_khachhang/view/KhachHangPanel.java",
+    "sha256": "281EBDB777B4B5882064850FD95C120B366221B34BA1CAC752ECDFA2510C3ACD"
+  },
+  {
+    "path": "src/module_khachhang/view/NhanEnumRenderer.java",
+    "sha256": "26DAD06AACDF4C1EE3201737F073148BB79C7EE1BD1E3850EA54F5B2D357BDB1"
+  },
+  {
+    "path": "src/module_lienket/dao/LienKetDAO.java",
+    "sha256": "AE072F8FBF11AA091EECBA46C09611196B86A48F8400A06F898FBA316B42B896"
+  },
+  {
+    "path": "src/module_lienket/dao/MemoryLienKetDAO.java",
+    "sha256": "08B5BEBBC69298FF069047C50A554E44C0F401BB3C4F3D92C6374457555CAB0F"
+  },
+  {
+    "path": "src/module_lienket/dao/SqlServerLienKetDAO.java",
+    "sha256": "24080FA65E7C98AF421ED7015C0DFCF9F34BF9358176C4E39A3FA4665888C32E"
+  },
+  {
+    "path": "src/module_lienket/model/DuLieuLienKet.java",
+    "sha256": "F660515455E878FB02D78C9347A2941B0BBDFD113E726D531DB0CF3A43624CE4"
+  },
+  {
+    "path": "src/module_lienket/service/LienKetService.java",
+    "sha256": "750B9A04CCFBF76ED44F7E9586905777A856D4492DD10407D8B931EE4B7E4BFE"
+  },
+  {
+    "path": "src/module_phong/controller/HoSoPhongController.java",
+    "sha256": "C57B930C8944D826B32ED7A5D955BE4EBA7BA6EF8D31D6F578D104FA67F63534"
+  },
+  {
+    "path": "src/module_phong/controller/PhongController.java",
+    "sha256": "4F26AC090A5FD28E15749348634DB753027C4E1803FA7DEB7517516263A82DAB"
+  },
+  {
+    "path": "src/module_phong/dao/HoSoPhongDAO.java",
+    "sha256": "F908AEF68BF86962C912799A68293480B352C713D36C1F0267FAFF225F3AA528"
+  },
+  {
+    "path": "src/module_phong/dao/MemoryHoSoPhongDAO.java",
+    "sha256": "80EB023A5539751F6786A1DFD5F4B4A0AA298D85ADDA075D61560AA54B8A4552"
+  },
+  {
+    "path": "src/module_phong/dao/MemoryPhongDAO.java",
+    "sha256": "F10890A1D5B3C4CF6270F7E6C4F07C6C3D65D549AE6C08658543FA7E62E7504F"
+  },
+  {
+    "path": "src/module_phong/dao/PhongDAO.java",
+    "sha256": "0B2F70A2A5537A8DEBB39E4F050E34E8B2DE589E65375D680204FC58E302D88F"
+  },
+  {
+    "path": "src/module_phong/dao/SqlServerHoSoPhongDAO.java",
+    "sha256": "747D70ABCE4F257E77EE129FD6B770723DE7FBF916F96430DB3661704EE67272"
+  },
+  {
+    "path": "src/module_phong/dao/SqlServerPhongDAO.java",
+    "sha256": "D803DF940860287DDE9DA7697289ED4D088C6628F6747128E1982E47A3296CA8"
+  },
+  {
+    "path": "src/module_phong/model/CongViecPhong.java",
+    "sha256": "BB4AF56CD81A89726319513005D979B8734B07080FE7706BD1F700CDCDF10620"
+  },
+  {
+    "path": "src/module_phong/model/DuLieuPhong.java",
+    "sha256": "F3253BECB10C9C8646EA961383759EEFBEE51A13AEFE5008C9FF779B166CA120"
+  },
+  {
+    "path": "src/module_phong/model/HoSoPhong.java",
+    "sha256": "A9F91FAF99ED719CD59580ED7BCE5D0317CA28914CF7CBAC48470C11AACDD2D4"
+  },
+  {
+    "path": "src/module_phong/model/LoaiPhong.java",
+    "sha256": "41A29D26DD332ECF9A2FB50DCBD186983FD946669EC634DB2183E7109A96FD77"
+  },
+  {
+    "path": "src/module_phong/model/Phong.java",
+    "sha256": "1B0BF47089A0C1ADA1B7CC9F20FF14840D68533A7939C5F2DE80F546D5F5D67E"
+  },
+  {
+    "path": "src/module_phong/model/Tang.java",
+    "sha256": "DD5E4CC3D5E7F6E7818113257B53E5FF78645ECDF27B28A77DC72F7837E58847"
+  },
+  {
+    "path": "src/module_phong/model/TrangThaiPhong.java",
+    "sha256": "89C0DB4FAFFACE2A1BD624C289CCCA14CF0A377CF4CBCE8524E464D5554CF072"
+  },
+  {
+    "path": "src/module_phong/service/CongLuuTru.java",
+    "sha256": "5A7D94DF878340BCEBD555F3D6CA8C035F48E2C88041E37FB31D3262C55DE6F3"
+  },
+  {
+    "path": "src/module_phong/service/HoSoPhongService.java",
+    "sha256": "5D09688A53D21DB756E20ACA46525BBFA65311EAF145DC19E58A3148511B98C5"
+  },
+  {
+    "path": "src/module_phong/service/PhongService.java",
+    "sha256": "0A42E413C35263CD006209E6292638E519870E4522D3F3E067E70397F3A6D38F"
+  },
+  {
+    "path": "src/module_phong/service/TiepNhanLuuTruService.java",
+    "sha256": "0CA732DBE00919656DE9487E3C6561F6E27738186D75897933C90FE8E065907E"
+  },
+  {
+    "path": "src/module_phong/view/CongViecView.java",
+    "sha256": "CB694B778D2B046DA3E4BCB97B81287127E8365334E22B27E86A4891EB13D804"
+  },
+  {
+    "path": "src/module_phong/view/HoSoPhongView.java",
+    "sha256": "40F0E700EF5BCC2D1900C8424D684A7B77EB706481E80CC252A161E6FF7ABB1D"
+  },
+  {
+    "path": "src/module_phong/view/PhongView.java",
+    "sha256": "E60611FA79BBB2CAA226FBF2DB86F448468C81AD039A84044FB0CBC63653E78F"
+  },
+  {
+    "path": "test.ps1",
+    "sha256": "D421FAE50EF798D590106B3BE08F19B3E1EFF65D9AA4D994C118497D11836789"
+  },
+  {
+    "path": "test/ModulePhongTest.java",
+    "sha256": "986C640FFF8B904347F6AC942F7AB356AD636AB03AD7D3870ABC768FD5887CE0"
+  },
+  {
+    "path": "test/PortalTest.java",
+    "sha256": "736882D90ACB2733FBF3A359E6D4938C21BC15384FEC024C928B08BDD8079F52"
+  },
+  {
+    "path": "test/PortalViewTest.java",
+    "sha256": "E3EC1CCD958ABC55515CF2A9E4C617E9C7C18401939A75CD5A4B1BF58B535B6E"
+  },
+  {
+    "path": "test/SharedContextTest.java",
+    "sha256": "AEA608C8438D34DA85AC427F09516961596157B17EC57707F0D6EE1EB59BDD82"
+  },
+  {
+    "path": "test/SyncTest.java",
+    "sha256": "87BA4F4A4B8863FA29B6AF36C6C6FECB46450E46B2F5DE63B798AB2E6C0B5DA7"
+  },
+  {
+    "path": "verification/CUSTOMER_SQL_FIX.md",
+    "sha256": "1424DE0A767C714A7397F0B5E039B312964C295C7CA8FF91AA4FE5C20AB2BF69"
+  },
+  {
+    "path": "verification/CustomerUniqueTest.java",
+    "sha256": "25AFAC9F3676E89362DCBE99C2E3874207333D7D845168506B01E756C82591BB"
+  },
+  {
+    "path": "verification/java-tests.log",
+    "sha256": "9BCECCDC80D8A2983B5EC35BC5A26A311FAA6F12627E26D88A71C6310C2B962D"
+  },
+  {
+    "path": "verification/jdbc-simple2.log",
+    "sha256": "1F51A9B42B9534B645675053933F353F7DD1A9BC1638A9BB599D1D754EC160EF"
+  },
+  {
+    "path": "verification/linked-ant.log",
+    "sha256": "2BB281636BD3A0A38933159CA6B75657D8B227FBEA695F86951FE212FF667A19"
+  },
+  {
+    "path": "verification/netbeans-clean-build.log",
+    "sha256": "8D7A250B836226FE764F8928E81D1BCF8F28FEB37E4660E4D6192CD034F98440"
+  },
+  {
+    "path": "verification/netbeans-project-validation.log",
+    "sha256": "52D5902A3CD4A30B1B9AD0020F513834DDDD3951C585CB6BC94C91C7BBEF839C"
+  },
+  {
+    "path": "verification/portal-0.png",
+    "sha256": "3BCA29E7B7A664257D90C1598CD6C25FDD4891911FE912B3DC725C6B50E70196"
+  },
+  {
+    "path": "verification/portal-1.png",
+    "sha256": "54E0B7896451878D8C32333D01D87B8078DA321827596B0511CB9E51BB8B58F8"
+  },
+  {
+    "path": "verification/portal-2.png",
+    "sha256": "116F994AAE83DD14D8CC10D6DA0E9B9EBA060C8E824A659F0298D92F797C6998"
+  },
+  {
+    "path": "verification/portal-3.png",
+    "sha256": "12258683BD7BB227C0C2B14BB2B52E1FB254D3F28BD12E7026D8C64EA52C1333"
+  },
+  {
+    "path": "verification/preview-0.png",
+    "sha256": "035B8E6E632F4BBA738ECEFCB7DFE2ADFD304E217C0A4ED07C7B1C9EDE2B7D1B"
+  },
+  {
+    "path": "verification/preview-1.png",
+    "sha256": "1940B65DB12B3615A170C0CC218A6F81760F758522249FF5755756BD615187DA"
+  },
+  {
+    "path": "verification/preview-2.png",
+    "sha256": "330E482C95D73973349867FD5DF6856DE3D7CF28E94A746DAEF6B2FB71A22D5A"
+  },
+  {
+    "path": "verification/preview-3.png",
+    "sha256": "ED3FE823A14E671A29D1E74E11DDD260019BC6C4CAE2F5881751D8AD3A03EBD9"
+  },
+  {
+    "path": "verification/preview-4.png",
+    "sha256": "6038695CE8E92B486F59D700B597C35BE0E7BCB0EA32603E4050B02377B17447"
+  },
+  {
+    "path": "verification/RESULTS.md",
+    "sha256": "4F5820BDF88DC7DB56F1DFEA3A68434154EB852E6DFFB1BCD45BEC2FF8724C30"
+  },
+  {
+    "path": "verification/simple-kit2.log",
+    "sha256": "BB7CAFAC450EE0A5CC43B599F43FC116F2CC53946829F37A97B04C94147E5F58"
+  },
+  {
+    "path": "VERSION.json",
+    "sha256": "07C55AE02E5AE07A464EE3BBECBB20C7816EEFB38D451ACF6ACA33FF1FE4F918"
+  }
+]

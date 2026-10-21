@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="HotelModules" default="jar" basedir=".">
+    <property name="classes" location="build/classes"/>
+    <property name="db.config" location="config/db.properties"/>
+    <path id="runtime"><pathelement location="${classes}"/><fileset dir="lib" includes="*.jar"/></path>
+    <target name="compile">
+        <mkdir dir="${classes}"/>
+        <javac srcdir="src" destdir="${classes}" release="17" encoding="UTF-8" includeantruntime="false"/>
+    </target>
+    <target name="jar" depends="compile">
+        <jar destfile="ModulePhong.jar" basedir="${classes}">
+            <manifest><attribute name="Main-Class" value="demo.HotelSharedApp"/></manifest>
+        </jar>
+    </target>
+    <target name="run" depends="compile" description="Run all module panels with shared SQL Server">
+        <java classname="demo.HotelSharedApp" fork="true" failonerror="true" dir="${basedir}" classpathref="runtime">
+            <jvmarg value="-Djava.library.path=${basedir}/lib"/>
+            <arg value="--sql"/><arg file="${db.config}"/>
+        </java>
+    </target>
+    <target name="run-demo" depends="compile" description="Run shared memory demo">
+        <java classname="demo.HotelSharedApp" fork="true" failonerror="true" dir="${basedir}" classpathref="runtime"/>
+    </target>
+    <target name="check-db" depends="compile" description="Read-only JDBC/schema check">
+        <java classname="demo.CheckDatabase" fork="true" failonerror="true" dir="${basedir}" classpathref="runtime">
+            <jvmarg value="-Djava.library.path=${basedir}/lib"/>
+            <arg file="${db.config}"/>
+        </java>
+    </target>
+    <target name="test-compile" depends="compile">
+        <mkdir dir="build/test-classes"/>
+        <javac srcdir="test" destdir="build/test-classes" release="17" encoding="UTF-8" includeantruntime="false" classpathref="runtime"/>
+    </target>
+    <target name="test" depends="test-compile">
+        <java classname="SharedContextTest" fork="true" failonerror="true"><classpath refid="runtime"/><classpath path="build/test-classes"/><jvmarg value="-Djava.awt.headless=true"/></java>
+        <java classname="PortalTest" fork="true" failonerror="true"><classpath refid="runtime"/><classpath path="build/test-classes"/><jvmarg value="-Djava.awt.headless=true"/></java>
+        <java classname="SyncTest" fork="true" failonerror="true"><classpath refid="runtime"/><classpath path="build/test-classes"/><jvmarg value="-Djava.awt.headless=true"/></java>
+    </target>
+    <target name="test-sql" depends="test-compile" description="Writes ONLY to an isolated HotelManagement_Portal_Test_ database">
+        <java classname="SharedContextTest" fork="true" failonerror="true" dir="${basedir}">
+            <classpath refid="runtime"/><classpath path="build/test-classes"/>
+            <jvmarg value="-Djava.library.path=${basedir}/lib"/>
+            <jvmarg value="-Djava.net.preferIPv4Stack=true"/>
+            <arg file="${db.config}"/>
+        </java>
+    </target>
+    <target name="clean"><delete dir="build/classes"/><delete dir="build/test-classes"/><delete file="ModulePhong.jar"/></target>
+    <target name="rebuild" depends="clean,jar"/>
+</project>

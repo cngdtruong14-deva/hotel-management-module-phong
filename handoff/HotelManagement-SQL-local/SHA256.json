@@ -1,0 +1,13 @@
+{
+  "00_tao_database.sql": "c1b840a8a989291afbd9c106f4c891fa34e80b8c1eb697c0a0301ac03ca0a18d",
+  "01_bang_chinh.sql": "261ca4e0957cba32e63a65e96204d495105881e817e3c05d996a6a28c2dadf61",
+  "02_bang_chuc_nang.sql": "879751b8da17bbbdb1b57c9bbc0972d333929cc40b3676c6b7bdefe77605bf1c",
+  "03_du_lieu_mau.sql": "1c7e4decd701bd5f299d9b9d551610196664accd000c9aed577bcb15ed7cd0a6",
+  "04_kiem_tra.sql": "2ce04e0d35f66fa7ae1b6c074b40e69637b4262561f9c40e2cb0a41c8f1d4b01",
+  "05_vi_du_dat_va_doi_phong.sql": "e9625a7617508fc60fa7b3f0c53fbf66d8e499a4561105b8a0549fe4b9f4dc2f",
+  "06_chan_trung_giay_to.sql": "8959ad05b7e5459994bad221b311485e57ebfb0c218a8565ef197592ac685c0e",
+  "ERD.md": "c0df5dc391170df8d0c63c3e404ebcf943dae303f23eee3ff9c54bb3f05594bf",
+  "KIEM_CHUNG.md": "1166bb6c74037fe1933da54ad4227222fe63c6114bb413da08e5d49b4d7563e3",
+  "README.md": "fd512258286f7f0d2caca07ac9acfe64acef9c309c664876226962db654d4bc7",
+  "VERSION.json": "e1e0329d8b64291e9fa891154124e81708a7f2b06474f1697f01eede89e8d000"
+}

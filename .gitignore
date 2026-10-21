@@ -1,0 +1,15 @@
+# Historical inputs and local diagnostics
+/archive/
+/work/
+/audit/
+# Local connection settings and generated output
+**/config/db.properties
+**/nbproject/private/
+**/build/
+**/verification/*.properties
+**/verification/*.sql
+**/verification/*.log
+*.class
+.env
+.env.*
+!.env.example
