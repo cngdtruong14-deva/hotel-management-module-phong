@@ -1,7 +1,7 @@
 ﻿USE HotelManagementDB_LocalSimple;
 GO
 
--- Bước 4: Dữ liệu khởi đầu. Chạy một lần, DatPhong vẫn để trống.
+-- Buoc 4: Du lieu khoi dau. Chay mot lan, DatPhong van de trong.
 INSERT INTO Tang (MaTang, TenTang)
 VALUES ('T1', N'Tầng 1'), ('T2', N'Tầng 2'), ('T3', N'Tầng 3');
 
@@ -19,7 +19,7 @@ INSERT INTO KhachHang (MaKhachHang, HoTen, LoaiGiayTo, SoGiayTo, QuocGiaCap, SoD
 VALUES ('KH00000001', N'Nguyễn Văn An', 'CCCD', '001234567890', 'VN', '0901234567', N'an@example.com', N'Hà Nội'),
        ('KH00000002', N'Trần Thị Bình', 'CCCD', '001234567891', 'VN', '0912345678', N'binh@example.com', N'Hà Nội'),
        ('KH00000003', N'Lê Văn Cường', NULL, NULL, NULL, '0923456789', N'cuong@example.com', N'Hải Phòng');
--- Tránh Java sinh trùng ba mã khách mẫu.
+-- Tranh Java sinh trung ba ma khach mau.
 ALTER SEQUENCE SeqKhachHang RESTART WITH 4;
 
 INSERT INTO ChiTietPhong (MaPhong, MoTa)

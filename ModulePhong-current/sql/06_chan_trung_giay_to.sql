@@ -1,5 +1,5 @@
-﻿-- Database đã tạo bằng room-simple-1: chỉ chạy file này để bổ sung chống trùng.
--- Nếu dùng tên database khác, sửa USE trước khi chạy. Không sửa/xóa hồ sơ.
+﻿-- Database da tao bang room-simple-1: chi chay file nay de bo sung chong trung.
+-- Neu dung ten database khac, sua USE truoc khi chay. Khong sua/xoa ho so.
 USE HotelManagementDB_LocalSimple;
 GO
 SET ANSI_NULLS ON;
@@ -12,7 +12,7 @@ SET NUMERIC_ROUNDABORT OFF;
 SET XACT_ABORT ON;
 BEGIN TRY
     BEGIN TRANSACTION;
-    -- Khóa trong lúc kiểm tra và tạo index để tránh phát sinh bản ghi trùng mới.
+    -- Khoa trong luc kiem tra va tao index de tranh phat sinh ban ghi trung moi.
     IF EXISTS (
         SELECT 1 FROM dbo.KhachHang WITH (TABLOCKX, HOLDLOCK)
         WHERE SoGiayTo IS NOT NULL
@@ -27,14 +27,14 @@ BEGIN TRY
         ) AS Trung WHERE SoBanTrung > 1;
         THROW 51001, N'Có giấy tờ trùng. Chưa thay đổi database; đối chiếu hồ sơ trước khi chạy lại.', 1;
     END;
-    -- Nếu index đã có, không tạo lại. File kiểm chứng bên dưới xác nhận cấu trúc.
+    -- Neu index da co, khong tao lai. Phan kiem tra ben duoi xac nhan cau truc.
     IF NOT EXISTS (SELECT 1 FROM sys.indexes WHERE object_id=OBJECT_ID(N'dbo.KhachHang') AND name=N'UX_KhachHang_GiayTo')
     BEGIN
         CREATE UNIQUE INDEX UX_KhachHang_GiayTo
-ON dbo.KhachHang(LoaiGiayTo, QuocGiaCap, SoGiayTo)
-WHERE SoGiayTo IS NOT NULL;
+        ON dbo.KhachHang(LoaiGiayTo, QuocGiaCap, SoGiayTo)
+        WHERE SoGiayTo IS NOT NULL;
     END;
-    -- Tên trùng nhưng cấu trúc khác: dừng để tránh báo thành công sai.
+    -- Ten trung nhung cau truc khac: dung de tranh bao thanh cong sai.
     IF NOT EXISTS (
         SELECT 1 FROM sys.indexes i
         WHERE i.object_id=OBJECT_ID(N'dbo.KhachHang') AND i.name=N'UX_KhachHang_GiayTo'

@@ -1,9 +1,9 @@
 ﻿USE HotelManagementDB_LocalSimple;
 GO
 
--- Bước 3: Các bảng phục vụ chức năng giao diện còn lại.
+-- Buoc 3: Cac bang phuc vu chuc nang giao dien con lai.
 
--- 1. Mô tả và tiện nghi của phòng
+-- 1. Mo ta va tien nghi cua phong
 CREATE TABLE ChiTietPhong (
     MaPhong VARCHAR(20) PRIMARY KEY REFERENCES Phong(MaPhong),
     MoTa NVARCHAR(2000) NOT NULL DEFAULT N''
@@ -18,7 +18,7 @@ CREATE TABLE PhongTienNghi (
 );
 -- TinhTrang: TOT, CAN_SUA, NGUNG_DUNG.
 
--- 2. Yêu cầu gửi từ quản lý phòng sang đặt phòng/lưu trú
+-- 2. Yeu cau gui tu quan ly phong sang dat phong/luu tru
 CREATE TABLE YeuCauDatPhong (
     MaYeuCau VARCHAR(20) PRIMARY KEY,
     MaKhachHang VARCHAR(20) NOT NULL REFERENCES KhachHang(MaKhachHang),
@@ -33,7 +33,7 @@ CREATE TABLE YeuCauDatPhong (
 );
 -- TrangThai: CHO_XU_LY, TIEP_NHAN, TU_CHOI, HOAN_TAT.
 
--- 3. Trạng thái lưu trú nhận về để giao diện phòng theo dõi
+-- 3. Trang thai luu tru nhan ve de giao dien phong theo doi
 CREATE TABLE PhongLuuTruNhan (
     MaDatPhong VARCHAR(20) PRIMARY KEY REFERENCES DatPhong(MaDatPhong),
     MaPhong VARCHAR(20) NOT NULL REFERENCES Phong(MaPhong),
@@ -43,7 +43,7 @@ CREATE TABLE PhongLuuTruNhan (
     CapNhatLuc DATETIME2(0) NOT NULL DEFAULT SYSDATETIME()
 );
 
--- 4. Review và điểm đánh giá của khách
+-- 4. Review va diem danh gia cua khach
 CREATE TABLE PhongDanhGiaNhan (
     MaDanhGia VARCHAR(20) PRIMARY KEY,
     MaDatPhong VARCHAR(20) NOT NULL REFERENCES DatPhong(MaDatPhong),
@@ -53,9 +53,9 @@ CREATE TABLE PhongDanhGiaNhan (
     NoiDung NVARCHAR(2000) NOT NULL,
     TaoLuc DATETIME2(0) NOT NULL DEFAULT SYSDATETIME()
 );
--- Java kiểm tra điểm 1..5, đúng khách/phòng, phiếu đã trả và một review/phiếu.
+-- Java kiem tra diem 1..5, dung khach/phong, phieu da tra va mot review/phieu.
 
--- 5. Phản ánh trong từng phòng
+-- 5. Phan anh trong tung phong
 CREATE TABLE PhongPhanAnhNhan (
     MaPhanAnh VARCHAR(20) PRIMARY KEY,
     MaDatPhong VARCHAR(20) NOT NULL REFERENCES DatPhong(MaDatPhong),
@@ -67,9 +67,9 @@ CREATE TABLE PhongPhanAnhNhan (
     CapNhatLuc DATETIME2(0) NOT NULL DEFAULT SYSDATETIME()
 );
 -- TrangThai: MOI, DANG_XU_LY, DA_XU_LY.
--- PhienBan ở các bảng nhận giữ để tương thích service Java hiện có.
+-- PhienBan o cac bang nhan giu de tuong thich service Java hien co.
 
--- 6. Vệ sinh và bảo trì
+-- 6. Ve sinh va bao tri
 CREATE TABLE VeSinh (
     MaVeSinh VARCHAR(36) PRIMARY KEY,
     MaPhong VARCHAR(20) NOT NULL REFERENCES Phong(MaPhong),
@@ -87,7 +87,7 @@ CREATE TABLE BaoTri (
     KetThuc DATETIME2(0) NULL
 );
 
--- 7. Danh mục và dịch vụ đã sử dụng (giữ liên kết các module đã có)
+-- 7. Danh muc va dich vu da su dung (giu lien ket cac module da co)
 CREATE TABLE DichVu (
     MaDichVu VARCHAR(20) PRIMARY KEY,
     TenDichVu NVARCHAR(100) NOT NULL,
@@ -104,5 +104,5 @@ CREATE TABLE SuDungDichVu (
     ThoiGianSuDung DATETIME2(0) NOT NULL DEFAULT SYSDATETIME(),
     ThanhTien AS CAST(SoLuong * DonGia AS DECIMAL(18,2))
 );
--- ThanhTien tự tính để Java hiện tại vẫn đọc được.
+-- ThanhTien tu tinh de Java hien tai van doc duoc.
 GO

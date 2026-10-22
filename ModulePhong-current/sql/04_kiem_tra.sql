@@ -1,20 +1,20 @@
 ﻿USE HotelManagementDB_LocalSimple;
 GO
 
--- Bước 5: Xem dữ liệu vừa tạo.
+-- Buoc 5: Xem du lieu vua tao.
 SELECT * FROM LoaiPhong;
 SELECT * FROM Phong;
 SELECT * FROM KhachHang;
-SELECT * FROM DatPhong; -- Chưa có dòng nào sau file 03.
+SELECT * FROM DatPhong; -- Chua co dong nao sau file 03.
 
--- Danh sách phòng kèm tên loại và giá hiện tại.
+-- Danh sach phong kem ten loai va gia hien tai.
 SELECT p.MaPhong, p.SoPhong, l.TenLoai, t.TenTang,
        COALESCE(p.GiaPhong, l.GiaTheoNgay) AS GiaHienHanh, p.TrangThai
 FROM Phong p
 JOIN LoaiPhong l ON p.MaLoaiPhong = l.MaLoaiPhong
 JOIN Tang t ON p.MaTang = t.MaTang;
 
--- Các màn hình quản lý phòng.
+-- Cac man hinh quan ly phong.
 SELECT * FROM PhongTienNghi;
 SELECT * FROM YeuCauDatPhong;
 SELECT * FROM PhongDanhGiaNhan;
@@ -23,7 +23,7 @@ SELECT d.MaDatPhong, d.MaPhong, k.HoTen, d.NgayNhan
 FROM DatPhong d JOIN KhachHang k ON d.MaKhachHang = k.MaKhachHang
 WHERE d.TrangThai = 'DANG_O';
 
--- Lịch sử chuyển phòng và dịch vụ theo lượt.
+-- Lich su chuyen phong va dich vu theo luot.
 SELECT * FROM ChuyenPhong;
 SELECT d.MaLuotLuuTru, d.MaDatPhong, d.MaPhong, d.NgayNhan, d.NgayTra, d.TrangThai
 FROM DatPhong d ORDER BY d.NgayDat;

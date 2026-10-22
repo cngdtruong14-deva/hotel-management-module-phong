@@ -1,16 +1,16 @@
 ﻿USE HotelManagementDB_LocalSimple;
 GO
 
--- Bước 2: Các bảng chính của Phòng, Khách hàng và Đặt phòng.
--- Chỉ chạy một lần trên database mới.
+-- Buoc 2: Cac bang chinh cua Phong, Khach hang va Dat phong.
+-- Chi chay mot lan tren database moi.
 
--- 1. Tầng: giữ riêng vì giao diện hiện có chức năng quản lý tầng.
+-- 1. Tang: giu rieng vi giao dien hien co chuc nang quan ly tang.
 CREATE TABLE Tang (
     MaTang VARCHAR(20) PRIMARY KEY,
     TenTang NVARCHAR(100) NOT NULL
 );
 
--- 2. Loại phòng
+-- 2. Loai phong
 CREATE TABLE LoaiPhong (
     MaLoaiPhong VARCHAR(20) PRIMARY KEY,
     TenLoai NVARCHAR(100) NOT NULL,
@@ -18,8 +18,8 @@ CREATE TABLE LoaiPhong (
     SoNguoiToiDa INT NOT NULL
 );
 
--- 3. Phòng
--- Trạng thái: TRONG, DA_DAT, DANG_SU_DUNG, DANG_DON, BAO_TRI.
+-- 3. Phong
+-- Trang thai: TRONG, DA_DAT, DANG_SU_DUNG, DANG_DON, BAO_TRI.
 CREATE TABLE Phong (
     MaPhong VARCHAR(20) PRIMARY KEY,
     SoPhong NVARCHAR(20) NOT NULL,
@@ -29,9 +29,9 @@ CREATE TABLE Phong (
     TrangThai VARCHAR(20) NOT NULL DEFAULT 'TRONG',
     NgungSuDung BIT NOT NULL DEFAULT 0
 );
--- GiaPhong để NULL thì lấy giá trong LoaiPhong.
+-- GiaPhong de NULL thi lay gia trong LoaiPhong.
 
--- 4. Khách hàng: giữ đủ 13 thuộc tính của module khách hàng đã làm.
+-- 4. Khach hang: giu du 13 thuoc tinh cua module khach hang da lam.
 CREATE TABLE KhachHang (
     MaKhachHang VARCHAR(20) PRIMARY KEY,
     HoTen NVARCHAR(100) NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE KhachHang (
     NgayTao DATETIME2(0) NOT NULL DEFAULT SYSDATETIME(),
     TrangThai VARCHAR(20) NOT NULL DEFAULT 'HOAT_DONG'
 );
--- Giữ quy tắc chống trùng giấy tờ của module khách hàng gốc.
+-- Giu quy tac chong trung giay to cua module khach hang goc.
 SET ANSI_NULLS ON;
 SET QUOTED_IDENTIFIER ON;
 SET ANSI_PADDING ON;
@@ -59,18 +59,18 @@ CREATE UNIQUE INDEX UX_KhachHang_GiayTo
 ON dbo.KhachHang(LoaiGiayTo, QuocGiaCap, SoGiayTo)
 WHERE SoGiayTo IS NOT NULL;
 
--- Java hiện có dùng sequence này để sinh KH00000001, KH00000002,...
+-- Java hien co dung sequence nay de sinh KH00000001, KH00000002,...
 CREATE SEQUENCE SeqKhachHang AS BIGINT START WITH 1 INCREMENT BY 1;
 
--- 5. Một lượt lưu trú chung; dùng để nối các phiếu khi khách đổi phòng.
+-- 5. Mot luot luu tru chung; dung de noi cac phieu khi khach doi phong.
 CREATE TABLE LuotLuuTru (
     MaLuotLuuTru VARCHAR(20) PRIMARY KEY,
     MaKhachHang VARCHAR(20) NOT NULL REFERENCES KhachHang(MaKhachHang),
     TaoLuc DATETIME2(0) NOT NULL DEFAULT SYSDATETIME()
 );
 
--- 6. Phiếu đặt phòng (mỗi phiếu gắn một phòng).
--- Trạng thái: GIU_PHONG, DANG_O, DA_TRA, DA_HUY.
+-- 6. Phieu dat phong (moi phieu gan mot phong).
+-- Trang thai: GIU_PHONG, DANG_O, DA_TRA, DA_HUY.
 CREATE TABLE DatPhong (
     MaDatPhong VARCHAR(20) PRIMARY KEY,
     MaKhachHang VARCHAR(20) NOT NULL REFERENCES KhachHang(MaKhachHang),
@@ -82,11 +82,11 @@ CREATE TABLE DatPhong (
     TrangThai VARCHAR(20) NOT NULL DEFAULT 'GIU_PHONG',
     MaLuotLuuTru VARCHAR(20) NULL REFERENCES LuotLuuTru(MaLuotLuuTru)
 );
--- NgayNhan/NgayTra là thời điểm thực tế; chưa nhận/trả thì NULL.
--- GiaPhongChot giữ giá tại lúc đặt, không thay khi danh mục tăng giá.
--- MaLuotLuuTru để NULL vẫn tương thích Java cũ; khi đổi phòng Java tạo nhóm.
+-- NgayNhan/NgayTra la thoi diem thuc te; chua nhan/tra thi NULL.
+-- GiaPhongChot giu gia tai luc dat, khong thay khi danh muc tang gia.
+-- MaLuotLuuTru de NULL van tuong thich Java cu; khi doi phong Java tao nhom.
 
--- 7. Lịch sử đổi phòng: giữ phiếu cũ, tạo phiếu phòng mới cùng lượt.
+-- 7. Lich su doi phong: giu phieu cu, tao phieu phong moi cung luot.
 CREATE TABLE ChuyenPhong (
     MaChuyenPhong VARCHAR(20) PRIMARY KEY,
     MaDatPhongCu VARCHAR(20) NOT NULL REFERENCES DatPhong(MaDatPhong),
